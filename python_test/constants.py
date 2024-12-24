@@ -1,0 +1,1 @@
+TEST = "Je suis une chaîne de test et une constante. essayer fstring. paramètre : {}"
