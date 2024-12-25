@@ -1,5 +1,5 @@
 import math
-from constants import TEST
+from constants import TEST, test
 
 nombre = 5
 nombre2 = nombre

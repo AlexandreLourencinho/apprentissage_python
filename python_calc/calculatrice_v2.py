@@ -1,17 +1,3 @@
-# def is_float(number):
-#     if isinstance(number, float):
-#         return True
-#     else:
-#         return False
-#
-#
-# def is_int(number):
-#     if isinstance(number, int):
-#         return True
-#     else:
-#         return False
-
-
 print("""ici, il s'agit du programme de calculatrice de base.
 On va vous demander deux nombres, pour les additionner et ensuite vous afficher le résultat.
 tentative version plus aboutie avec très petite base de connaissance.
