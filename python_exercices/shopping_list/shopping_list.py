@@ -1,4 +1,4 @@
-from colors import bcolors
+from constant_classes.colors import bcolors
 
 # goal is to manage a shopping list (without db or file save for now)
 
@@ -51,7 +51,6 @@ while True:
             else:
                 print(bcolors.FAIL + "désolé, votre commande n'a pas été reconnue.")
                 print(bcolors.WARNING + "pour rappel, utilisez 1 pour ajouter un élément dans votre liste, 2 pour en enlever un.")
-
 
     else:
         print(bcolors.FAIL + "Votre commande n'est pas gérée par ce programme !")
