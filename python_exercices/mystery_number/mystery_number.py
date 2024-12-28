@@ -13,6 +13,7 @@ while play == 1:
     the_number = random.randint(1, 100)
 
     print("bonjour ! vous allez devoir deviner le nombre mystère!")
+    print("ce nombre est compris entre 1 et 100!")
     print("pour celà, vous devrez entrer un nombre, et nous vous dirons si le nombre mystère est")
     print("plus petit ou plus grand que votre nombre.")
     print("vous aurez un nombre de tentatives différent selon la difficulté que vous choisirez.")
@@ -60,10 +61,10 @@ while play == 1:
             print("félicitation!")
             break
         elif guess > the_number:
-            print("plus petit!")
+            print(f"plus petit que {guess}!")
             i -= 1
         else:
-            print("plus grand!")
+            print(f"plus grand que {guess}!")
             i -= 1
 
     if guess != the_number:
