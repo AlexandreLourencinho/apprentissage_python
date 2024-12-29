@@ -1,5 +1,5 @@
 import random
-from constant_classes.ascii import AsciiArt as ascii
+from constant_classes.ascii import AsciiArt as ascii_art
 from constant_classes.colors import bcolors
 import time
 
@@ -9,7 +9,7 @@ import time
 # des chances d'esquive, et la possibilité de se défendre (dégats / 2)
 # 1 = attaque, 2 = défend, 3 = potion
 
-print(ascii.CROSSED_SWORDS)
+print(ascii_art.CROSSED_SWORDS)
 time.sleep(3)
 
 # mob values
@@ -66,7 +66,7 @@ while hp_mob > 0 and hp_player > 0:
     attack_player = 0
     attack_mob = 0
 
-    print(ascii.MOB)
+    print(ascii_art.MOB)
     time.sleep(1)
 
     # stats display
@@ -109,7 +109,7 @@ while hp_mob > 0 and hp_player > 0:
 
                 if hp_player > 115:
                     hp_player = 115
-                    print(ascii.HEALTH_POT)
+                    print(ascii_art.HEALTH_POT)
                 print(
                     f"vous avez bu une potion et récupéré {bcolors.OKCYAN} {hp_player_regained} {bcolors.ENDC} points de vie !")
                 print(f"vous avez désormais {bcolors.OKGREEN} {hp_player} {bcolors.ENDC} points de vie.")
@@ -138,7 +138,7 @@ while hp_mob > 0 and hp_player > 0:
     # pot management for mob
     else:
         print("truc boit une potion!")
-        print(ascii.HEALTH_POT)
+        print(ascii_art.HEALTH_POT)
         time.sleep(2)
         hp_mob_gained = random.randint(5, 15)
         hp_mob += hp_mob_gained
@@ -149,7 +149,7 @@ while hp_mob > 0 and hp_player > 0:
     #player attack management
     if action_player == 1:
         print("vous portez un coup d'épée à truc!")
-        print(ascii.WEAPON)
+        print(ascii_art.WEAPON)
         time.sleep(2)
         if player_hit_chance > random.randint(0, 100):
 
@@ -160,7 +160,7 @@ while hp_mob > 0 and hp_player > 0:
             # mob getting hit
             else:
                 print("il le prend dans la mouille!")
-                print(ascii.IMPACT)
+                print(ascii_art.IMPACT)
                 time.sleep(2)
                 did_player_crit = random.randint(1, 100) < player_crit_chance
                 final_player_damages = attack_player if action_mob != 2 else round(attack_player / 2)
@@ -176,7 +176,7 @@ while hp_mob > 0 and hp_player > 0:
                 #mob defense stance
                 if action_mob == 2:
                     print("truc s'est préparé et n'a pris que la moitié des dégats.")
-                    print(ascii.MOB_SHIELD)
+                    print(ascii_art.MOB_SHIELD)
                 print(f"truc a pris {bcolors.FAIL} {final_player_damages} dégats {bcolors.ENDC}!")
                 print(f"il reste {bcolors.WARNING} {hp_mob} {bcolors.ENDC} points de vie à truc.")
                 time.sleep(3)
@@ -192,7 +192,7 @@ while hp_mob > 0 and hp_player > 0:
 
     #mob attack management
     if action_mob == 1:
-        print(ascii.MOB_WEAPON_MACE)
+        print(ascii_art.MOB_WEAPON_MACE)
         print("oh non! truc essaie de vous en mettre une!")
 
         if mob_hit_chance > random.randint(0, 100):
@@ -204,7 +204,7 @@ while hp_mob > 0 and hp_player > 0:
             #player getting it
             else:
                 print("oh non, vous l'avez pris en pleine poire!")
-                print(ascii.IMPACT)
+                print(ascii_art.IMPACT)
                 time.sleep(2)
                 did_mob_crit = random.randint(1, 100) < mob_crit_chance
                 final_mob_damages = attack_mob if action_player != 2 else round(attack_mob / 2)
@@ -219,7 +219,7 @@ while hp_mob > 0 and hp_player > 0:
 
                 # player defense stance
                 if action_player == 2:
-                    print(ascii.SHIELD)
+                    print(ascii_art.SHIELD)
                     print(
                         f"{bcolors.OKCYAN} Vous avez encaissé le gros du choc avec votre bouclier et n'avez pris que la moitié des dégats! {bcolors.ENDC}")
                     time.sleep(3)
